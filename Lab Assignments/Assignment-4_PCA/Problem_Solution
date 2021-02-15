@@ -1,0 +1,24 @@
+Used 2 data sets to reduce the dimension of images using PCA.
+
+Analysis was to identify the no. of principal componenets
+
+Data set 1 : Yale Faces
+Data set 2 : MNIST
+
+Reconstructed the images using x no. of components
+
+
+The goal of this assignment is to reduce the dimension of data and yet be able to preserve the significant information.
+
+Algorithm:
+1) Load images as (x,x) dimensions
+2) Flatten each image as (x.x,1) dimension
+3) Find the mean of (x,x) list
+4) Subtract each image with the mean and form a mean subtracted image matrix(M) of dimension (n,x.x)
+5) Find the covariance matrix(M)
+6) Find Eigen Values, Eigen Vectors and display them
+7) Reconstruction: mean image + (EigenVector[:-i].transpose(EigenVector[:-i]))
+where i is the no. of components
+
+Using - sign because the the vector is sorted in ascending order. But we reconstruct the image using highest eigen values, therefore, we reconstruct it from last i components 
+
